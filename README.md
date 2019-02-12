@@ -29,6 +29,35 @@ $ pivnet download-product-files -p elastic-runtime -r 2.4.2 -i 258595
 ## Terraform
 ### Variables File - `terraform.tfvars`
 
+```
+env_name           = "YOUR-ENVIRONMENT-NAME"
+access_key         = "YOUR-ACCESS-KEY"
+secret_key         = "YOUR-SECRET-KEY"
+region             = "ap-northeast-1"
+availability_zones = ["Yap-northeast-1a", "ap-northeast-1c", "ap-northeast-1d"]
+ops_manager_ami    = "YOUR-OPS-MAN-IMAGE-AMI"
+dns_suffix         = "YOUR-DNS-SUFFIX"
+
+ssl_cert = <<SSL_CERT
+-----BEGIN CERTIFICATE-----
+YOUR-CERTIFICATE
+-----END CERTIFICATE-----
+SSL_CERT
+
+ssl_private_key = <<SSL_KEY
+-----BEGIN EXAMPLE RSA PRIVATE KEY-----
+YOUR-PRIVATE-KEY
+-----END EXAMPLE RSA PRIVATE KEY-----
+SSL_KEY
+```
+
+#### AWS Availability Zone
+
+```
+$ aws ec2 describe-availability-zones --region ap-northeast-1
+```
+
+
 ### Terrafom Apply
 
 ```
