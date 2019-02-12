@@ -72,3 +72,25 @@ $ terraform plan -out=plan
 $ terraform apply plan
 ```
 
+### DNS Record
+
+```
+`$ cat terraform.tfstate | jq -r '.modules[0].outputs.env_dns_zone_name_servers.value'`
+```
+
+## OpsManager
+
+### Access OpsManager
+
+- https://$OPS_DOMAIN
+
+```
+$ OPS_DOMAIN = cat terraform.tfstate | jq -r '.modules[0].outputs.ops_manager_dns.value'
+```
+
+### AWS Config
+
+|Input|Value|
+|-----|-----|
+|Access Key ID|cat terraform.tfstate \| jq -r '.modules[0].outputs.ops_manager_iam_user_access_key.value'|
+|AWS Secret Key|cat terraform.tfstate \| jq -r '.modules[0].outputs.ops_manager_iam_user_secret_key.value'|
