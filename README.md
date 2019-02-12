@@ -1,4 +1,4 @@
-# Tarraform PAS and PKS for Azure
+# Tarraform PAS for AWS
 ---
 
 ## Preparation
@@ -25,3 +25,15 @@ $ pivnet login --api-token='27f8.........'
 $ pivnet product-files -p elastic-runtime -r 2.4.2
 $ pivnet download-product-files -p elastic-runtime -r 2.4.2 -i 258595
 ```
+
+## Terraform
+### Variables File - `terraform.tfvars`
+
+### Terrafom Apply
+
+```
+$ terraform init
+$ terraform plan -out=plan
+$ terraform apply plan
+```
+
