@@ -98,3 +98,9 @@ $ OPS_DOMAIN = cat terraform.tfstate | jq -r '.modules[0].outputs.ops_manager_dn
 |Key Pair Name|cat terraform.tfstate \| jq -r '.modules[0].outputs.ops_manager_ssh_public_key_name.value'|
 |SSH Private Key|cat terraform.tfstate \| jq -r '.modules[0].outputs.ops_manager_ssh_private_key.value'|
 |Region|cat terraform.tfstate \| jq -r '.modules[0].outputs.region.value'|
+
+### Director Config
+
+|Input|Value|
+|-----|-----|
+|NTP Servers|0.amazon.pool.ntp.org,1.amazon.pool.ntp.org,2.amazon.pool.ntp.org,3.amazon.pool.ntp.org|
