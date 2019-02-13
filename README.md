@@ -105,3 +105,4 @@ $ OPS_DOMAIN = cat terraform.tfstate | jq -r '.modules[0].outputs.ops_manager_dn
 |-----|-----|
 |NTP Servers|0.amazon.pool.ntp.org,1.amazon.pool.ntp.org,2.amazon.pool.ntp.org,3.amazon.pool.ntp.org|
 |JMX Provider IP Address|---|
+|Bosh HM Forwarder IP Address|---|
