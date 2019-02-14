@@ -245,3 +245,6 @@ $ OPS_DOMAIN = cat terraform.tfstate | jq -r '.modules[0].outputs.ops_manager_dn
 |-----|-----|
 |Do you want to configure Syslog for Bosh Director?|No|
 
+### Resource Config
+
+- Default
