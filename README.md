@@ -106,3 +106,22 @@ $ OPS_DOMAIN = cat terraform.tfstate | jq -r '.modules[0].outputs.ops_manager_dn
 |NTP Servers|0.amazon.pool.ntp.org,1.amazon.pool.ntp.org,2.amazon.pool.ntp.org,3.amazon.pool.ntp.org|
 |JMX Provider IP Address|---|
 |Bosh HM Forwarder IP Address|---|
+|Enable VM Resurrector Plugin|TRUE|
+|Enable Post Deploy Scripts|TRUE|
+|Recreate all VMs|TRUE|
+|Recreate All Persistent Disks|TRUE|
+|Enable bosh deploy retries |TRUE|
+|Skip Director Drain Lifecycle|TRUE|
+|Allow Legacy Agents|TRUE|
+|Keep Unreachable Director VMs|FALSE|
+|HM Pager Duty Plugin|FALSE|
+|HM Email Plugin|FALSE|
+|CredHub Encryption Provider|Internal|
+|Blobstore Location|Internal|
+|Enable TLS|TRUE|
+|Database Location|Internal|
+|Director Workers|5|
+|Max Threads|---|
+|Director Hostname|---|
+|Custom SSH Banner|---|
+|Identification Tags|---|
