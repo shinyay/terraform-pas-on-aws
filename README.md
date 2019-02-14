@@ -215,3 +215,26 @@ $ OPS_DOMAIN = cat terraform.tfstate | jq -r '.modules[0].outputs.ops_manager_dn
 |DNS|10.0.0.2|
 |Gateway|cat terraform.tfstate | jq -r '.modules[0].outputs.services_subnet_gateways.value[2]'|
 |Availability Zones|cat terraform.tfstate | jq -r '.modules[0].outputs.services_subnet_availability_zones.value[2]'|
+
+### Assign AZs and Networks
+
+|Input|Value|
+|-----|-----|
+|Singleton Availability Zone|ap-northeast-1a|
+|Network|infrastructure|
+
+### Security
+
+|Input|Value|
+|-----|-----|
+|Trusted Certificates|---|
+| Include OpsManager Root CA in Trusted Certs|FALSE|
+|Generate VM passwords or use single password for all VMs|Generate passwords|
+
+### BOSH DNS Config
+
+|Input|Value|
+|-----|-----|
+|Excluded Recursors|---|
+|Recursor Timeout|---|
+|Handlers|[]|
