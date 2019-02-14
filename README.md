@@ -188,3 +188,30 @@ $ OPS_DOMAIN = cat terraform.tfstate | jq -r '.modules[0].outputs.ops_manager_dn
 |DNS|10.0.0.2|
 |Gateway|cat terraform.tfstate | jq -r '.modules[0].outputs.pas_subnet_gateways.value[2]'|
 |Availability Zones|cat terraform.tfstate | jq -r '.modules[0].outputs.pas_subnet_availability_zones.value[2]'|
+
+#### Services
+
+|Input|Value|
+|-----|-----|
+|Name|services|
+|1st subnet|---|
+|VPC Subnet ID|cat terraform.tfstate | jq -r '.modules[0].outputs.services_subnet_ids.value[0]'|
+|CIDR|cat terraform.tfstate | jq -r '.modules[0].outputs.services_subnet_cidrs.value[0]'<br>Ex. 10.0.8.0/24|
+|Reserved IP Ranges|10.0.8.0-10.0.8.3|
+|DNS|10.0.0.2|
+|Gateway|cat terraform.tfstate | jq -r '.modules[0].outputs.services_subnet_gateways.value[0]'|
+|Availability Zones|cat terraform.tfstate | jq -r '.modules[0].outputs.services_subnet_availability_zones.value[0]'|
+|2nd subnet|---|
+|VPC Subnet ID|cat terraform.tfstate | jq -r '.modules[0].outputs.services_subnet_ids.value[1]'|
+|CIDR|cat terraform.tfstate | jq -r '.modules[0].outputs.services_subnet_cidrs.value[1]'<br>Ex. 10.0.9.0/24|
+|Reserved IP Ranges|10.0.9.0-10.0.9.4|
+|DNS|10.0.0.2|
+|Gateway|cat terraform.tfstate | jq -r '.modules[0].outputs.services_subnet_gateways.value[1]'|
+|Availability Zones|cat terraform.tfstate | jq -r '.modules[0].outputs.services_subnet_availability_zones.value[1]'|
+|3rd subnet|---|
+|VPC Subnet ID|cat terraform.tfstate | jq -r '.modules[0].outputs.services_subnet_ids.value[2]'|
+|CIDR|cat terraform.tfstate | jq -r '.modules[0].outputs.services_subnet_cidrs.value[2]'<br>Ex. 10.0.10.0/24|
+|Reserved IP Ranges|10.0.10.0-10.0.10.4|
+|DNS|10.0.0.2|
+|Gateway|cat terraform.tfstate | jq -r '.modules[0].outputs.services_subnet_gateways.value[2]'|
+|Availability Zones|cat terraform.tfstate | jq -r '.modules[0].outputs.services_subnet_availability_zones.value[2]'|
