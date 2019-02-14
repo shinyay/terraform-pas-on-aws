@@ -126,3 +126,11 @@ $ OPS_DOMAIN = cat terraform.tfstate | jq -r '.modules[0].outputs.ops_manager_dn
 |Custom SSH Banner|---|
 |Identification Tags|---|
 
+### Create Availability Zones
+
+|Input|Value|
+|-----|-----|
+|Amazon Availability Zone|cat terraform.tfstate \| jq -r '.modules[0].outputs.management_subnet_availability_zones.value'|
+
+### Create Networks
+
