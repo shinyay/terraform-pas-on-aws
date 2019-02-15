@@ -312,3 +312,12 @@ $ om --target https://localhost -k -u admin -p admin --request-timeout 3600 uplo
 $ om --target https://localhost -k -u admin -p admin stage-product -p cf -v 2.4.2
 ```
 
+## PAS on Azure
+
+### Assign AZ and Networks
+
+|Input|Value|
+|-----|-----|
+|Place singleton jobs in|どれか|
+|Balance other jobs in|全て|
+|Network|pas|
