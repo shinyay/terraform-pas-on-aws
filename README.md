@@ -288,7 +288,7 @@ $ pivnet product-files -p elastic-runtime -r 2.4.2
 $ pivnet download-product-files -p elastic-runtime -r 2.4.2 -i 293808
 ```
 
-## [JumpBox] Download Stemcell
+## [OPSMGR] Download Stemcell
 
 ```
 $ pivnet releases -p stemcells-ubuntu-xenial
