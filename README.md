@@ -321,3 +321,10 @@ $ om --target https://localhost -k -u admin -p admin stage-product -p cf -v 2.4.
 |Place singleton jobs in|どれか|
 |Balance other jobs in|全て|
 |Network|pas|
+
+### Domains
+
+|Input|Value|
+|-----|-----|
+|System Domain|cat terraform.tfstate | jq -r '.modules[0].outputs.sys_domain.value'|
+|Apps Domain|cat terraform.tfstate | jq -r '.modules[0].outputs.apps_domain.value'|
