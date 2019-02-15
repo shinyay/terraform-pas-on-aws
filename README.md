@@ -262,3 +262,12 @@ $ chmod 600 ops_mgr.pem
 ```
 $ ssh -i ops_mgr.pem ubuntu@OPSMAN_HOST_ADDRESS
 ```
+
+## [OPSMAN] CLI for PCF
+### OM CLI
+
+```
+$ wget https://github.com/pivotal-cf/om/releases/download/0.51.0/om-linux
+$ sudo mv om-linux /usr/local/bin/om
+$ sudo chmod +x /usr/local/bin/om
+```
