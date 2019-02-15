@@ -263,7 +263,7 @@ $ chmod 600 ops_mgr.pem
 $ ssh -i ops_mgr.pem ubuntu@OPSMAN_HOST_ADDRESS
 ```
 
-## [OPSMAN] CLI for PCF
+## [OPSMGR] CLI for PCF
 ### OM CLI
 
 ```
@@ -273,8 +273,17 @@ $ sudo chmod +x /usr/local/bin/om
 ```
 
 ### Pivnet CLI
+
 ```
 $ wget https://github.com/pivotal-cf/pivnet-cli/releases/download/v0.0.55/pivnet-linux-amd64-0.0.55
 $ sudo mv pivnet-linux* /usr/local/bin/pivnet
 $ sudo chmod +x /usr/local/bin/pivnet
+```
+
+## [OPSMGR] Download PAS
+
+```
+$ pivnet login --api-token='27f8.........'
+$ pivnet product-files -p elastic-runtime -r 2.4.2
+$ pivnet download-product-files -p elastic-runtime -r 2.4.2 -i 293808
 ```
