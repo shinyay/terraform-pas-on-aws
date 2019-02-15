@@ -328,3 +328,45 @@ $ om --target https://localhost -k -u admin -p admin stage-product -p cf -v 2.4.
 |-----|-----|
 |System Domain|cat terraform.tfstate | jq -r '.modules[0].outputs.sys_domain.value'|
 |Apps Domain|cat terraform.tfstate | jq -r '.modules[0].outputs.apps_domain.value'|
+|Router IPs|---|
+|SSH Proxy IPs|---|
+|HAProxy IPs|---|
+|TCP Router IPs|---|
+|Certificates and Private Keys for HAProxy and Router|Add|
+|Name|pas-cert|
+|Generate RSA Certificate|MY_DOMAIN = YOUR-ENVIRONMENT-NAME.YOUR-DOMAIN<br>*.$MY_DOMAIN,*.sys.$MY_DOMAIN,*.apps.$MY_DOMAIN,login.sys.$MY_DOMAIN,uaa.sys.$MY_DOMAIN,doppler.sys.$MY_DOMAIN,loggregator.sys.$MY_DOMAIN,ssh.sys.$MY_DOMAIN,tcp.$MY_DOMAIN,opsman.$MY_DOMAIN<br><br>[SAMPLE]<br>
+*.mypcf.syanagihara.cf,*.sys.mypcf.syanagihara.cf,*.apps.mypcf.syanagihara.cf,login.sys.mypcf.syanagihara.cf,uaa.sys.mypcf.syanagihara.cf,doppler.sys.mypcf.syanagihara.cf,loggregator.sys.mypcf.syanagihara.cf,ssh.sys.mypcf.syanagihara.cf,tcp.mypcf.syanagihara.cf,opsman.mypcf.syanagihara.cf|
+|Certificate Authorities Trusted by Router and HAProxy|---|
+|Minimum version of TLS supported by HAProxy and Router|<DEFAULT><br>TLSv1.2|
+|Logging of Client IPs in CF Router|<DEFAULT><br>Log client IPs|
+|Configure support for the X-Forwarded-Client-Cert header|<DEFAULT><br>TLS terminated for the first time at infrastructure load balancer|
+|HAProxy behavior for Client Certificate Validation|<DEFAULT><br>HAProxy does not request client certificates|
+|Router behavior for Client Certificate Validation|<DEFAULT><br>Router requests but does not require client certificates|
+|TLS Cipher Suites for Router|<DEFAULT>|
+|TLS Cipher Suites for HAProxy|<DEFAULT>|
+|HAProxy forwards requests to Router over TLS|Disable|
+|HAProxy support for HSTS|Disable|
+|Disable SSL certificate verification for this environment|TRUE|
+|Disable HTTP on HAProxy and Router|<DEFAULT><br>FALSE|
+|Disable insecure cookies on the Router|<DEFAULT><br>FALSE|
+|Enable Zipkin tracing headers on the Router<DEFAULT><br>TRUE|
+|Enable Router to write access logs locally|<DEFAULT><br>TRUE|
+|Routers reject requests for Isolation Segments|<DEFAULT><br>FALSE|
+|Enable support for PROXY protocol in CF Router|<DEFAULT><br>FALSE|
+|Choose whether to enable route services|<DEFAULT><br>Enable route services|
+|Max Connections Per Backend|<DEFAULT><br>500|
+|Enable Keepalive Connections for Router|<DEFAULT><br>Enable|
+|Router Timeout to Backends|<DEFAULT><br>900|
+|Frontend Idle Timeout for Router and HAProxy|<DEFAULT><br>900|
+|Load Balancer Unhealthy Threshold|<DEFAULT><br>20|
+|Load Balancer Healthy Threshold|<DEFAULT><br>20|
+|HTTP Headers to Log|---|
+|HAProxy Request Max Buffer Size|<DEFAULT><br>16384|
+|HAProxy Protected Domains|---|
+|HAProxy Trusted CIDRs|---|
+|Loggregator Port|---|
+|Container Network Interface Plugin|Silk|
+|DNS Search Domains|---|
+|Database Connection Timeout|120|
+|Enable TCP requests to your apps via specific ports on the TCP Router|Select this option if you prefer to enable TCP Routing at a later time|
+
