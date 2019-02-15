@@ -248,3 +248,17 @@ $ OPS_DOMAIN = cat terraform.tfstate | jq -r '.modules[0].outputs.ops_manager_dn
 ### Resource Config
 
 - Default
+
+## SSH to OpsManager VM
+### Private Key
+
+```
+$ cat terraform.tfstate | jq -r .modules[0].outputs.ops_manager_ssh_private_key.value > ops_mgr.pem
+$ chmod 600 ops_mgr.pem
+```
+
+### SSH
+
+```
+$ ssh -i ops_mgr.pem ubuntu@OPSMAN_HOST_ADDRESS
+```
