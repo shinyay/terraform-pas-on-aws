@@ -295,3 +295,11 @@ $ pivnet releases -p stemcells-ubuntu-xenial
 $ pivnet product-files -p stemcells-ubuntu-xenial -r 170.25
 $ pivnet download-product-files -p stemcells-ubuntu-xenial -r 170.25 -i 303825
 ```
+
+## [OPSMGR] Upload PAS Install Image
+
+- `om --target https://$OPS_MGR_DNS -k -u $OPS_MGR_USR -p $OPS_MGR_PWD --request-timeout 3600 upload-product -p ~/$FILENAME`
+
+```
+$ om --target https://localhost -k -u admin -p admin --request-timeout 3600 upload-product -p ~/cf-2.4.2-build.33.pivotal
+```
