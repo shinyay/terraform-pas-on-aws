@@ -271,3 +271,10 @@ $ wget https://github.com/pivotal-cf/om/releases/download/0.51.0/om-linux
 $ sudo mv om-linux /usr/local/bin/om
 $ sudo chmod +x /usr/local/bin/om
 ```
+
+### Pivnet CLI
+```
+$ wget https://github.com/pivotal-cf/pivnet-cli/releases/download/v0.0.55/pivnet-linux-amd64-0.0.55
+$ sudo mv pivnet-linux* /usr/local/bin/pivnet
+$ sudo chmod +x /usr/local/bin/pivnet
+```
