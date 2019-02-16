@@ -75,7 +75,7 @@ $ terraform apply plan
 ### DNS Record
 
 ```
-$ cat terraform.tfstate | jq -r '.modules[0].outputs.env_dns_zone_name_servers.value'
+$ cat terraform.tfstate \| jq -r '.modules[0].outputs.env_dns_zone_name_servers.value'
 ```
 
 ## OpsManager
@@ -85,7 +85,7 @@ $ cat terraform.tfstate | jq -r '.modules[0].outputs.env_dns_zone_name_servers.v
 - https://$OPS_DOMAIN
 
 ```
-$ OPS_DOMAIN = cat terraform.tfstate | jq -r '.modules[0].outputs.ops_manager_dns.value'
+$ OPS_DOMAIN = cat terraform.tfstate \| jq -r '.modules[0].outputs.ops_manager_dns.value'
 ```
 
 ### AWS Config
@@ -141,26 +141,26 @@ $ OPS_DOMAIN = cat terraform.tfstate | jq -r '.modules[0].outputs.ops_manager_dn
 |Networks|Add Network|
 |Name|infrastructure|
 |1st subnet|---|
-|VPC Subnet ID|cat terraform.tfstate | jq -r '.modules[0].outputs.infrastructure_subnet_ids.value[0]'|
-|CIDR|cat terraform.tfstate | jq -r '.modules[0].outputs.infrastructure_subnet_cidrs.value[0]'<br>Ex. 10.0.16.0/28|
+|VPC Subnet ID|cat terraform.tfstate \| jq -r '.modules[0].outputs.infrastructure_subnet_ids.value[0]'|
+|CIDR|cat terraform.tfstate \| jq -r '.modules[0].outputs.infrastructure_subnet_cidrs.value[0]'<br>Ex. 10.0.16.0/28|
 |Reserved IP Ranges|10.0.16.0-10.0.16.4|
 |DNS|10.0.0.2|
-|Gateway|cat terraform.tfstate | jq -r '.modules[0].outputs.infrastructure_subnet_gateways.value[0]'|
-|Availability Zones|cat terraform.tfstate | jq -r '.modules[0].outputs.infrastructure_subnet_availability_zones.value[0]'|
+|Gateway|cat terraform.tfstate \| jq -r '.modules[0].outputs.infrastructure_subnet_gateways.value[0]'|
+|Availability Zones|cat terraform.tfstate \| jq -r '.modules[0].outputs.infrastructure_subnet_availability_zones.value[0]'|
 |2nd subnet|---|
-|VPC Subnet ID|cat terraform.tfstate | jq -r '.modules[0].outputs.infrastructure_subnet_ids.value[1]'|
-|CIDR|cat terraform.tfstate | jq -r '.modules[0].outputs.infrastructure_subnet_cidrs.value[1]'<br>Ex. 10.0.16.16/28|
+|VPC Subnet ID|cat terraform.tfstate \| jq -r '.modules[0].outputs.infrastructure_subnet_ids.value[1]'|
+|CIDR|cat terraform.tfstate \| jq -r '.modules[0].outputs.infrastructure_subnet_cidrs.value[1]'<br>Ex. 10.0.16.16/28|
 |Reserved IP Ranges|10.0.16.16-10.0.16.20|
 |DNS|10.0.0.2|
-|Gateway|cat terraform.tfstate | jq -r '.modules[0].outputs.infrastructure_subnet_gateways.value[1]'|
-|Availability Zones|cat terraform.tfstate | jq -r '.modules[0].outputs.infrastructure_subnet_availability_zones.value[1]'|
+|Gateway|cat terraform.tfstate \| jq -r '.modules[0].outputs.infrastructure_subnet_gateways.value[1]'|
+|Availability Zones|cat terraform.tfstate \| jq -r '.modules[0].outputs.infrastructure_subnet_availability_zones.value[1]'|
 |3rd subnet|---|
-|VPC Subnet ID|cat terraform.tfstate | jq -r '.modules[0].outputs.infrastructure_subnet_ids.value[2]'|
-|CIDR|cat terraform.tfstate | jq -r '.modules[0].outputs.infrastructure_subnet_cidrs.value[2]'<br>Ex. 10.0.16.32/28|
+|VPC Subnet ID|cat terraform.tfstate \| jq -r '.modules[0].outputs.infrastructure_subnet_ids.value[2]'|
+|CIDR|cat terraform.tfstate \| jq -r '.modules[0].outputs.infrastructure_subnet_cidrs.value[2]'<br>Ex. 10.0.16.32/28|
 |Reserved IP Ranges|10.0.16.32-10.0.16.36|
 |DNS|10.0.0.2|
-|Gateway|cat terraform.tfstate | jq -r '.modules[0].outputs.infrastructure_subnet_gateways.value[2]'|
-|Availability Zones|cat terraform.tfstate | jq -r '.modules[0].outputs.infrastructure_subnet_availability_zones.value[2]'|
+|Gateway|cat terraform.tfstate \| jq -r '.modules[0].outputs.infrastructure_subnet_gateways.value[2]'|
+|Availability Zones|cat terraform.tfstate \| jq -r '.modules[0].outputs.infrastructure_subnet_availability_zones.value[2]'|
 
 #### PAS
 
@@ -168,26 +168,26 @@ $ OPS_DOMAIN = cat terraform.tfstate | jq -r '.modules[0].outputs.ops_manager_dn
 |-----|-----|
 |Name|pas|
 |1st subnet|---|
-|VPC Subnet ID|cat terraform.tfstate | jq -r '.modules[0].outputs.pas_subnet_ids.value[0]'|
-|CIDR|cat terraform.tfstate | jq -r '.modules[0].outputs.pas_subnet_cidrs.value[0]'<br>Ex. 10.0.4.0/24|
+|VPC Subnet ID|cat terraform.tfstate \| jq -r '.modules[0].outputs.pas_subnet_ids.value[0]'|
+|CIDR|cat terraform.tfstate \| jq -r '.modules[0].outputs.pas_subnet_cidrs.value[0]'<br>Ex. 10.0.4.0/24|
 |Reserved IP Ranges|10.0.4.0-10.0.4.4|
 |DNS|10.0.0.2|
-|Gateway|cat terraform.tfstate | jq -r '.modules[0].outputs.pas_subnet_gateways.value[0]'|
-|Availability Zones|cat terraform.tfstate | jq -r '.modules[0].outputs.pas_subnet_availability_zones.value[0]'|
+|Gateway|cat terraform.tfstate \| jq -r '.modules[0].outputs.pas_subnet_gateways.value[0]'|
+|Availability Zones|cat terraform.tfstate \| jq -r '.modules[0].outputs.pas_subnet_availability_zones.value[0]'|
 |2nd subnet|---|
-|VPC Subnet ID|cat terraform.tfstate | jq -r '.modules[0].outputs.pas_subnet_ids.value[1]'|
-|CIDR|cat terraform.tfstate | jq -r '.modules[0].outputs.pas_subnet_cidrs.value[1]'<br>Ex. 10.0.5.0/24|
+|VPC Subnet ID|cat terraform.tfstate \| jq -r '.modules[0].outputs.pas_subnet_ids.value[1]'|
+|CIDR|cat terraform.tfstate \| jq -r '.modules[0].outputs.pas_subnet_cidrs.value[1]'<br>Ex. 10.0.5.0/24|
 |Reserved IP Ranges|10.0.5.0-10.0.5.4|
 |DNS|10.0.0.2|
-|Gateway|cat terraform.tfstate | jq -r '.modules[0].outputs.pas_subnet_gateways.value[1]'|
-|Availability Zones|cat terraform.tfstate | jq -r '.modules[0].outputs.pas_subnet_availability_zones.value[1]'|
+|Gateway|cat terraform.tfstate \| jq -r '.modules[0].outputs.pas_subnet_gateways.value[1]'|
+|Availability Zones|cat terraform.tfstate \| jq -r '.modules[0].outputs.pas_subnet_availability_zones.value[1]'|
 |3rd subnet|---|
-|VPC Subnet ID|cat terraform.tfstate | jq -r '.modules[0].outputs.pas_subnet_ids.value[2]'|
-|CIDR|cat terraform.tfstate | jq -r '.modules[0].outputs.pas_subnet_cidrs.value[2]'<br>Ex. 10.0.6.0/24|
+|VPC Subnet ID|cat terraform.tfstate \| jq -r '.modules[0].outputs.pas_subnet_ids.value[2]'|
+|CIDR|cat terraform.tfstate \| jq -r '.modules[0].outputs.pas_subnet_cidrs.value[2]'<br>Ex. 10.0.6.0/24|
 |Reserved IP Ranges|10.0.6.0-10.0.6.4|
 |DNS|10.0.0.2|
-|Gateway|cat terraform.tfstate | jq -r '.modules[0].outputs.pas_subnet_gateways.value[2]'|
-|Availability Zones|cat terraform.tfstate | jq -r '.modules[0].outputs.pas_subnet_availability_zones.value[2]'|
+|Gateway|cat terraform.tfstate \| jq -r '.modules[0].outputs.pas_subnet_gateways.value[2]'|
+|Availability Zones|cat terraform.tfstate \| jq -r '.modules[0].outputs.pas_subnet_availability_zones.value[2]'|
 
 #### Services
 
@@ -195,26 +195,26 @@ $ OPS_DOMAIN = cat terraform.tfstate | jq -r '.modules[0].outputs.ops_manager_dn
 |-----|-----|
 |Name|services|
 |1st subnet|---|
-|VPC Subnet ID|cat terraform.tfstate | jq -r '.modules[0].outputs.services_subnet_ids.value[0]'|
-|CIDR|cat terraform.tfstate | jq -r '.modules[0].outputs.services_subnet_cidrs.value[0]'<br>Ex. 10.0.8.0/24|
+|VPC Subnet ID|cat terraform.tfstate \| jq -r '.modules[0].outputs.services_subnet_ids.value[0]'|
+|CIDR|cat terraform.tfstate \| jq -r '.modules[0].outputs.services_subnet_cidrs.value[0]'<br>Ex. 10.0.8.0/24|
 |Reserved IP Ranges|10.0.8.0-10.0.8.3|
 |DNS|10.0.0.2|
-|Gateway|cat terraform.tfstate | jq -r '.modules[0].outputs.services_subnet_gateways.value[0]'|
-|Availability Zones|cat terraform.tfstate | jq -r '.modules[0].outputs.services_subnet_availability_zones.value[0]'|
+|Gateway|cat terraform.tfstate \| jq -r '.modules[0].outputs.services_subnet_gateways.value[0]'|
+|Availability Zones|cat terraform.tfstate \| jq -r '.modules[0].outputs.services_subnet_availability_zones.value[0]'|
 |2nd subnet|---|
-|VPC Subnet ID|cat terraform.tfstate | jq -r '.modules[0].outputs.services_subnet_ids.value[1]'|
-|CIDR|cat terraform.tfstate | jq -r '.modules[0].outputs.services_subnet_cidrs.value[1]'<br>Ex. 10.0.9.0/24|
+|VPC Subnet ID|cat terraform.tfstate \| jq -r '.modules[0].outputs.services_subnet_ids.value[1]'|
+|CIDR|cat terraform.tfstate \| jq -r '.modules[0].outputs.services_subnet_cidrs.value[1]'<br>Ex. 10.0.9.0/24|
 |Reserved IP Ranges|10.0.9.0-10.0.9.4|
 |DNS|10.0.0.2|
-|Gateway|cat terraform.tfstate | jq -r '.modules[0].outputs.services_subnet_gateways.value[1]'|
-|Availability Zones|cat terraform.tfstate | jq -r '.modules[0].outputs.services_subnet_availability_zones.value[1]'|
+|Gateway|cat terraform.tfstate \| jq -r '.modules[0].outputs.services_subnet_gateways.value[1]'|
+|Availability Zones|cat terraform.tfstate \| jq -r '.modules[0].outputs.services_subnet_availability_zones.value[1]'|
 |3rd subnet|---|
-|VPC Subnet ID|cat terraform.tfstate | jq -r '.modules[0].outputs.services_subnet_ids.value[2]'|
-|CIDR|cat terraform.tfstate | jq -r '.modules[0].outputs.services_subnet_cidrs.value[2]'<br>Ex. 10.0.10.0/24|
+|VPC Subnet ID|cat terraform.tfstate \| jq -r '.modules[0].outputs.services_subnet_ids.value[2]'|
+|CIDR|cat terraform.tfstate \| jq -r '.modules[0].outputs.services_subnet_cidrs.value[2]'<br>Ex. 10.0.10.0/24|
 |Reserved IP Ranges|10.0.10.0-10.0.10.4|
 |DNS|10.0.0.2|
-|Gateway|cat terraform.tfstate | jq -r '.modules[0].outputs.services_subnet_gateways.value[2]'|
-|Availability Zones|cat terraform.tfstate | jq -r '.modules[0].outputs.services_subnet_availability_zones.value[2]'|
+|Gateway|cat terraform.tfstate \| jq -r '.modules[0].outputs.services_subnet_gateways.value[2]'|
+|Availability Zones|cat terraform.tfstate \| jq -r '.modules[0].outputs.services_subnet_availability_zones.value[2]'|
 
 ### Assign AZs and Networks
 
@@ -253,7 +253,7 @@ $ OPS_DOMAIN = cat terraform.tfstate | jq -r '.modules[0].outputs.ops_manager_dn
 ### Private Key
 
 ```
-$ cat terraform.tfstate | jq -r .modules[0].outputs.ops_manager_ssh_private_key.value > ops_mgr.pem
+$ cat terraform.tfstate \| jq -r .modules[0].outputs.ops_manager_ssh_private_key.value > ops_mgr.pem
 $ chmod 600 ops_mgr.pem
 ```
 
@@ -326,8 +326,8 @@ $ om --target https://localhost -k -u admin -p admin stage-product -p cf -v 2.4.
 
 |Input|Value|
 |-----|-----|
-|System Domain|cat terraform.tfstate | jq -r '.modules[0].outputs.sys_domain.value'|
-|Apps Domain|cat terraform.tfstate | jq -r '.modules[0].outputs.apps_domain.value'|
+|System Domain|cat terraform.tfstate \| jq -r '.modules[0].outputs.sys_domain.value'|
+|Apps Domain|cat terraform.tfstate \| jq -r '.modules[0].outputs.apps_domain.value'|
 |Router IPs|---|
 |SSH Proxy IPs|---|
 |HAProxy IPs|---|
@@ -370,3 +370,98 @@ $ om --target https://localhost -k -u admin -p admin stage-product -p cf -v 2.4.
 |Database Connection Timeout|120|
 |Enable TCP requests to your apps via specific ports on the TCP Router|Select this option if you prefer to enable TCP Routing at a later time|
 
+### Application Containers
+
+- DEFAULT
+
+### Application Developer Controls
+
+- DEFAULT
+
+### Application Security Groups
+
+- Type `X`
+
+### Authentication and Enterprise SSO
+
+- Internal UAA
+  - DEFAULT
+
+### UAA
+
+|Input|Value|
+|-----|-----|
+|Choose the location of your UAA database|PAS database|
+|JWT Issuer URI|---|
+|SAML Service Provider Credentials|Generate RSA Certificate|
+|SAML Service Provider Key Password|---|
+|SAML Entity ID Override|---|
+
+### CredHub
+
+|Input|Value|
+|-----|-----|
+|Choose the location of your UAA database|PAS database|
+|Encryption Keys|Add|
+|Name|pas-encrypt|
+|Key|<20字以上>|
+|Primary|TRUE|
+
+### Databases
+
+- Internal Databases - MySQL - Percona XtraDB Cluster
+
+### Internal MySQL
+
+- E-mail address (required)
+
+### File Storage
+
+- DEFAULT
+
+### System Logging
+
+- DEFAULT
+
+### Custom Branding
+
+- DEFAULT
+
+### Apps Manager
+
+- DEFAULT
+
+### Email Notifications
+
+- DEFAULT
+
+### App Autoscaler
+
+- DEFAULT
+
+### Cloud Controller
+
+- DEFAULT
+
+### Smoke Tests
+
+- DEFAULT
+
+### Advanced Features
+
+- DEFAULT
+
+### Metric Registrar
+
+- DEFAULT
+
+### Errands
+
+- DEFAULT
+
+### Resource Config
+
+|Input|Value|
+|-----|-----|
+|Router - LoadBalancers|cat terraform.tfstate \| jq -r .modules[0].outputs.web_elb_name.value|
+|Diego Brain - LoadBalancers|cat terraform.tfstate \| jq -r .modules[0].outputs.ssh_elb_name.value|
