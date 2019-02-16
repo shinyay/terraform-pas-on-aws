@@ -334,7 +334,7 @@ $ om --target https://localhost -k -u admin -p admin stage-product -p cf -v 2.4.
 |TCP Router IPs|---|
 |Certificates and Private Keys for HAProxy and Router|Add|
 |Name|pas-cert|
-|Generate RSA Certificate|MY_DOMAIN = YOUR-ENVIRONMENT-NAME.YOUR-DOMAIN<br>*.$MY_DOMAIN,*.sys.$MY_DOMAIN,*.apps.$MY_DOMAIN,login.sys.$MY_DOMAIN,uaa.sys.$MY_DOMAIN,doppler.sys.$MY_DOMAIN,loggregator.sys.$MY_DOMAIN,ssh.sys.$MY_DOMAIN,tcp.$MY_DOMAIN,opsman.$MY_DOMAIN<br><br>[SAMPLE]<br>*.mypcf.syanagihara.cf,*.sys.mypcf.syanagihara.cf,*.apps.mypcf.syanagihara.cf,login.sys.mypcf.syanagihara.cf,uaa.sys.mypcf.syanagihara.cf,doppler.sys.mypcf.syanagihara.cf,loggregator.sys.mypcf.syanagihara.cf,ssh.sys.mypcf.syanagihara.cf,tcp.mypcf.syanagihara.cf,opsman.mypcf.syanagihara.cf|
+|Generate RSA Certificate|MY_DOMAIN = YOUR-ENVIRONMENT-NAME.YOUR-DOMAIN<br>\*.$MY_DOMAIN,\*.sys.$MY_DOMAIN,\*.apps.$MY_DOMAIN,login.sys.$MY_DOMAIN,uaa.sys.$MY_DOMAIN,doppler.sys.$MY_DOMAIN,loggregator.sys.$MY_DOMAIN,ssh.sys.$MY_DOMAIN,tcp.$MY_DOMAIN,opsman.$MY_DOMAIN<br><br>[SAMPLE]<br>\*.mypcf.syanagihara.cf,\*.sys.mypcf.syanagihara.cf,\*.apps.mypcf.syanagihara.cf,login.sys.mypcf.syanagihara.cf,uaa.sys.mypcf.syanagihara.cf,doppler.sys.mypcf.syanagihara.cf,loggregator.sys.mypcf.syanagihara.cf,ssh.sys.mypcf.syanagihara.cf,tcp.mypcf.syanagihara.cf,opsman.mypcf.syanagihara.cf|
 |Certificate Authorities Trusted by Router and HAProxy|---|
 |Minimum version of TLS supported by HAProxy and Router|<DEFAULT><br>TLSv1.2|
 |Logging of Client IPs in CF Router|<DEFAULT><br>Log client IPs|
