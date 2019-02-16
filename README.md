@@ -481,3 +481,15 @@ $ om --target https://localhost -k -u admin -p admin stage-product -p cf -v 2.4.
 ```
 $ bosh alias-env aws -e $DIRECTOR-IP-ADDRESS --ca-cert /var/tempest/workspaces/default/root_ca_certificate
 ```
+
+```
+$ bosh -e aws log-in
+Using environment '$DIRECTOR-IP-ADDRESS'
+
+Email (): director
+Password (): $DIRECTOR_CREDENTIALS
+
+Successfully authenticated with UAA
+
+Succeeded
+```
