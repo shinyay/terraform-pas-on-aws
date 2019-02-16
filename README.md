@@ -499,3 +499,16 @@ Succeeded
 ```
 $ bosh -e aws vms
 ```
+
+### PAS VMs Stop
+
+```
+$ bosh -e aws -d $DEPLOYMENT stop --hard
+```
+
+### PAS VMs Start
+
+```
+$ find /var/tempest/workspaces/default/deployments -name cf-*.yml
+$ bosh -e aws -d $DEPLOYMENT start
+```
