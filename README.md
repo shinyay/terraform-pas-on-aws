@@ -312,7 +312,7 @@ $ om --target https://localhost -k -u admin -p admin --request-timeout 3600 uplo
 $ om --target https://localhost -k -u admin -p admin stage-product -p cf -v 2.4.2
 ```
 
-## PAS on Azure
+## PAS on AWS
 
 ### Assign AZ and Networks
 
