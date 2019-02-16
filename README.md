@@ -493,3 +493,9 @@ Successfully authenticated with UAA
 
 Succeeded
 ```
+
+### VMS list
+
+```
+$ bosh -e aws vms
+```
