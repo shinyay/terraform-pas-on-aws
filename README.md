@@ -2,6 +2,15 @@
 ---
 
 ## Preparation
+### AWS Instance Limits
+
+- https://ap-northeast-1.console.aws.amazon.com/ec2/v2/home?region=ap-northeast-1#Limits:
+  - t2.micro
+    - 50
+  - c4.large
+    - 20
+
+
 ### AWS CLI
 
 ```
