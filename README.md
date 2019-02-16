@@ -473,3 +473,11 @@ $ om --target https://localhost -k -u admin -p admin stage-product -p cf -v 2.4.
 |-----|-----|
 |Router - LoadBalancers|cat terraform.tfstate \| jq -r .modules[0].outputs.web_elb_name.value|
 |Diego Brain - LoadBalancers|cat terraform.tfstate \| jq -r .modules[0].outputs.ssh_elb_name.value|
+
+## PAS VMs Stop and Start
+
+### bosh login
+
+```
+$ bosh alias-env aws -e $DIRECTOR-IP-ADDRESS --ca-cert /var/tempest/workspaces/default/root_ca_certificate
+```
