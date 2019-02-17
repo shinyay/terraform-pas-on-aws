@@ -10,6 +10,11 @@
   - c4.large
     - 20
 
+### Terraform
+
+```
+$ brew install terraform
+```
 
 ### AWS CLI
 
@@ -21,6 +26,7 @@ $ brew install awscli
 
 ```
 $ aws configure
+
 AWS Access Key ID [None]: AKIA......
 AWS Secret Access Key [None]: 6wKCbAs........
 Default region name [None]: ap-northeast-1
