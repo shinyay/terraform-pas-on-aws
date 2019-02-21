@@ -15,6 +15,11 @@
 ```
 $ brew install terraform
 ```
+### jq
+
+```
+$ brew install jq
+```
 
 ### AWS CLI
 
