@@ -96,7 +96,7 @@ $ terraform apply plan
 - Check your Name Server confired by Terraform
 
 ```
-$ cat terraform.tfstate \| jq -r '.modules[0].outputs.env_dns_zone_name_servers.value'
+$ cat terraform.tfstate | jq -r '.modules[0].outputs.env_dns_zone_name_servers.value'
 ```
 
 - Manage your DNS service to configure your name service above
@@ -109,7 +109,7 @@ $ cat terraform.tfstate \| jq -r '.modules[0].outputs.env_dns_zone_name_servers.
 - https://$OPS_DOMAIN
 
 ```
-$ OPS_DOMAIN = cat terraform.tfstate \| jq -r '.modules[0].outputs.ops_manager_dns.value'
+$ OPS_DOMAIN = cat terraform.tfstate | jq -r '.modules[0].outputs.ops_manager_dns.value'
 ```
 
 ### AWS Config
