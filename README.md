@@ -92,11 +92,15 @@ $ terraform plan -out=plan
 $ terraform apply plan
 ```
 
-### DNS Record
+### DNS Record Configuration
+- Check your Name Server confired by Terraform
 
 ```
 $ cat terraform.tfstate \| jq -r '.modules[0].outputs.env_dns_zone_name_servers.value'
 ```
+
+- Manage your DNS service to configure your name service above
+
 
 ## OpsManager
 
