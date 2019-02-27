@@ -365,7 +365,7 @@ $ om --target https://localhost -k -u admin -p admin stage-product -p cf -v 2.4.
 |System Domain|cat terraform.tfstate \| jq -r '.modules[0].outputs.sys_domain.value'|
 |Apps Domain|cat terraform.tfstate \| jq -r '.modules[0].outputs.apps_domain.value'|
 
-### Domains
+### Networking
 
 |Input|Value|
 |-----|-----|
@@ -389,7 +389,7 @@ $ om --target https://localhost -k -u admin -p admin stage-product -p cf -v 2.4.
 |Disable SSL certificate verification for this environment|TRUE|
 |Disable HTTP on HAProxy and Router|<DEFAULT><br>FALSE|
 |Disable insecure cookies on the Router|<DEFAULT><br>FALSE|
-|Enable Zipkin tracing headers on the Router<DEFAULT><br>TRUE|
+|Enable Zipkin tracing headers on the Router|<DEFAULT><br>TRUE|
 |Enable Router to write access logs locally|<DEFAULT><br>TRUE|
 |Routers reject requests for Isolation Segments|<DEFAULT><br>FALSE|
 |Enable support for PROXY protocol in CF Router|<DEFAULT><br>FALSE|
