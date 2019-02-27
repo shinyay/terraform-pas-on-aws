@@ -364,6 +364,11 @@ $ om --target https://localhost -k -u admin -p admin stage-product -p cf -v 2.4.
 |-----|-----|
 |System Domain|cat terraform.tfstate \| jq -r '.modules[0].outputs.sys_domain.value'|
 |Apps Domain|cat terraform.tfstate \| jq -r '.modules[0].outputs.apps_domain.value'|
+
+### Domains
+
+|Input|Value|
+|-----|-----|
 |Router IPs|---|
 |SSH Proxy IPs|---|
 |HAProxy IPs|---|
