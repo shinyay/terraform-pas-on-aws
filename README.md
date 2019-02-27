@@ -312,16 +312,16 @@ $ sudo chmod +x /usr/local/bin/pivnet
 
 ```
 $ pivnet login --api-token='27f8.........'
-$ pivnet product-files -p elastic-runtime -r 2.4.2
-$ pivnet download-product-files -p elastic-runtime -r 2.4.2 -i 293808
+$ pivnet product-files -p elastic-runtime -r 2.4.3
+$ pivnet download-product-files -p elastic-runtime -r 2.4.2 -i 310780
 ```
 
 ## [OPSMGR] Download Stemcell
 
 ```
 $ pivnet releases -p stemcells-ubuntu-xenial
-$ pivnet product-files -p stemcells-ubuntu-xenial -r 170.25
-$ pivnet download-product-files -p stemcells-ubuntu-xenial -r 170.25 -i 303825
+$ pivnet product-files -p stemcells-ubuntu-xenial -r 170.30
+$ pivnet download-product-files -p stemcells-ubuntu-xenial -r 170.30 -i 313919
 ```
 
 ## [OPSMGR] Upload PAS Install Image
