@@ -503,8 +503,8 @@ $ om --target https://localhost -k -u admin -p admin stage-product -p cf -v 2.4.
 
 |Input|Value|
 |-----|-----|
-|Router - LoadBalancers|cat terraform.tfstate /| jq -r .modules[4].resources'["aws_lb.web"]'.primary.attributes.name|
-|Diego Brain - LoadBalancers|cat terraform.tfstate /| jq -r .modules[4].resources'["aws_lb.ssh"]'.primary.attributes.name|
+|Router - LoadBalancers|cat terraform.tfstate \| jq -r .modules[4].resources'["aws_lb.web"]'.primary.attributes.name|
+|Diego Brain - LoadBalancers|cat terraform.tfstate \| jq -r .modules[4].resources'["aws_lb.ssh"]'.primary.attributes.name|
 
 ## PAS VMs Stop and Start
 
