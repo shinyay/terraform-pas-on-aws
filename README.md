@@ -164,7 +164,7 @@ $ OPS_DOMAIN = cat terraform.tfstate | jq -r '.modules[0].outputs.ops_manager_dn
 |Verification Settings|FALSE|
 |Networks|Add Network|
 |Name|infrastructure|
-|1st subnet|---|
+|**1ST SUBNET**|---|
 |VPC Subnet ID|cat terraform.tfstate \| jq -r '.modules[0].outputs.infrastructure_subnet_ids.value[0]'|
 |CIDR|cat terraform.tfstate \| jq -r '.modules[0].outputs.infrastructure_subnet_cidrs.value[0]'<br>Ex. 10.0.16.0/28|
 |Reserved IP Ranges|10.0.16.0-10.0.16.4|
@@ -228,14 +228,14 @@ $ OPS_DOMAIN = cat terraform.tfstate | jq -r '.modules[0].outputs.ops_manager_dn
 |2nd subnet|---|
 |VPC Subnet ID|cat terraform.tfstate \| jq -r '.modules[0].outputs.services_subnet_ids.value[1]'|
 |CIDR|cat terraform.tfstate \| jq -r '.modules[0].outputs.services_subnet_cidrs.value[1]'<br>Ex. 10.0.9.0/24|
-|Reserved IP Ranges|10.0.9.0-10.0.9.4|
+|Reserved IP Ranges|10.0.9.0-10.0.9.3|
 |DNS|10.0.0.2|
 |Gateway|cat terraform.tfstate \| jq -r '.modules[0].outputs.services_subnet_gateways.value[1]'|
 |Availability Zones|cat terraform.tfstate \| jq -r '.modules[0].outputs.services_subnet_availability_zones.value[1]'|
 |3rd subnet|---|
 |VPC Subnet ID|cat terraform.tfstate \| jq -r '.modules[0].outputs.services_subnet_ids.value[2]'|
 |CIDR|cat terraform.tfstate \| jq -r '.modules[0].outputs.services_subnet_cidrs.value[2]'<br>Ex. 10.0.10.0/24|
-|Reserved IP Ranges|10.0.10.0-10.0.10.4|
+|Reserved IP Ranges|10.0.10.0-10.0.10.3|
 |DNS|10.0.0.2|
 |Gateway|cat terraform.tfstate \| jq -r '.modules[0].outputs.services_subnet_gateways.value[2]'|
 |Availability Zones|cat terraform.tfstate \| jq -r '.modules[0].outputs.services_subnet_availability_zones.value[2]'|
@@ -272,6 +272,10 @@ $ OPS_DOMAIN = cat terraform.tfstate | jq -r '.modules[0].outputs.ops_manager_dn
 ### Resource Config
 
 - Default
+
+## Apply Change
+
+- Apply Change
 
 ## SSH to OpsManager VM
 ### Private Key
