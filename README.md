@@ -313,7 +313,7 @@ $ sudo chmod +x /usr/local/bin/pivnet
 ```
 $ pivnet login --api-token='27f8.........'
 $ pivnet product-files -p elastic-runtime -r 2.4.3
-$ pivnet download-product-files -p elastic-runtime -r 2.4.2 -i 310780
+$ pivnet download-product-files -p elastic-runtime -r 2.4.3 -i 310780
 ```
 
 ## [OPSMGR] Download Stemcell
@@ -329,7 +329,7 @@ $ pivnet download-product-files -p stemcells-ubuntu-xenial -r 170.30 -i 313919
 - `om --target https://$OPS_MGR_DNS -k -u $OPS_MGR_USR -p $OPS_MGR_PWD --request-timeout 3600 upload-product -p ~/$FILENAME`
 
 ```
-$ om --target https://localhost -k -u admin -p admin --request-timeout 3600 upload-product -p ~/cf-2.4.2-build.33.pivotal
+$ om --target https://localhost -k -u admin -p admin --request-timeout 3600 upload-product -p ~/cf-2.4.3-build.18.pivotal
 ```
 
 ## [OPSMGR] Upload Stemcell Image
@@ -345,7 +345,7 @@ $ om --target https://localhost -k -u admin -p admin --request-timeout 3600 uplo
 - `om --target https://$OPS_MGR_DNS -k -u $OPS_MGR_USR -p $OPS_MGR_PWD stage-product -p $PRODUCT_NAME -v $PRODUCT_VERSION`
 
 ```
-$ om --target https://localhost -k -u admin -p admin stage-product -p cf -v 2.4.2
+$ om --target https://localhost -k -u admin -p admin stage-product -p cf -v 2.4.3
 ```
 
 ## PAS on AWS
