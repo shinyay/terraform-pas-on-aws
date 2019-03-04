@@ -294,6 +294,10 @@ $ chmod 600 ops_mgr.pem
 ### SSH
 
 ```
+$ OPSMAN_HOST_ADDRESS = aws ec2 describe-instances --filter "Name=tag:Name,Values=pcf-ops-manager"|jq -r .Reservations[].Instances[].PublicIpAddress
+```
+
+```
 $ ssh -i ops_mgr.pem ubuntu@OPSMAN_HOST_ADDRESS
 ```
 
