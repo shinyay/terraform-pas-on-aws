@@ -249,6 +249,8 @@ $ OPS_DOMAIN = cat terraform.tfstate | jq -r '.modules[0].outputs.ops_manager_dn
 
 ### Security
 
+- Default
+
 |Input|Value|
 |-----|-----|
 |Trusted Certificates|---|
@@ -257,6 +259,8 @@ $ OPS_DOMAIN = cat terraform.tfstate | jq -r '.modules[0].outputs.ops_manager_dn
 
 ### BOSH DNS Config
 
+- Default
+
 |Input|Value|
 |-----|-----|
 |Excluded Recursors|---|
@@ -264,6 +268,8 @@ $ OPS_DOMAIN = cat terraform.tfstate | jq -r '.modules[0].outputs.ops_manager_dn
 |Handlers|[]|
 
 ### Syslog
+
+- Default
 
 |Input|Value|
 |-----|-----|
