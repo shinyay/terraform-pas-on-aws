@@ -516,6 +516,18 @@ $ om --target https://localhost -k -u admin -p admin stage-product -p cf -v 2.4.
 |Router - LoadBalancers|cat terraform.tfstate \| jq -r .modules[0].outputs.web_elb_name.value|
 |Diego Brain - LoadBalancers|cat terraform.tfstate \| jq -r .modules[0].outputs.ssh_elb_name.value|
 
+## MySQL for PCF
+
+### [OPSMGR] Download MySQL
+
+```
+$ pivnet products
+$ pivnet releases -p pivotal-mysql
+$ pivnet accept-eula -p pivotal-mysql -r 2.5.3
+$ pivnet product-files -p pivotal-mysql -r 2.5.3
+$ pivnet download-product-files -p pivotal-mysql -r 2.5.3 -i 288349
+```
+
 ## PAS VMs Stop and Start
 
 ### bosh login
