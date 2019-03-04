@@ -528,6 +528,12 @@ $ pivnet product-files -p pivotal-mysql -r 2.5.3
 $ pivnet download-product-files -p pivotal-mysql -r 2.5.3 -i 288349
 ```
 
+### [OPSMGR] Upload MySQL
+
+```
+$ om --target https://localhost -k -u admin -p admin --request-timeout 3600 upload-product -p ~/pivotal-mysql-2.5.3-build.7.pivotal
+```
+
 ## PAS VMs Stop and Start
 
 ### bosh login
