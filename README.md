@@ -347,7 +347,7 @@ $ om --target https://localhost -k -u admin -p admin --request-timeout 3600 uplo
 - `om --target https://$OPS_MGR_DNS -k -u $OPS_MGR_USR -p $OPS_MGR_PWD --request-timeout 3600 upload-stemcell -s ~/$STEMCELL`
 
 ```
-$ om --target https://localhost -k -u admin -p admin --request-timeout 3600 upload-product -s ~/light-bosh-stemcell-170.30-aws-xen-hvm-ubuntu-xenial-go_agent.tgz
+$ om --target https://localhost -k -u admin -p admin --request-timeout 3600 upload-stemcell -s ~/light-bosh-stemcell-170.30-aws-xen-hvm-ubuntu-xenial-go_agent.tgz
 ```
 
 ## [OPSMGR] Stage PAS
