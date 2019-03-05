@@ -574,6 +574,15 @@ $ pivnet product-files -p p-spring-cloud-services -r 2.0.7
 $ pivnet download-product-files -p p-spring-cloud-services -r 2.0.7 -i 320572
 ```
 
+### [OPSMGR] Upload SCS for PCF
+
+```
+$ om --target https://localhost -k -u admin -p admin --request-timeout 3600 upload-product -p ~/p-spring-cloud-services-2.0.7.pivotal
+```
+```
+$ om --target https://localhost -k -u admin -p admin stage-product -p p-spring-cloud-services -v 2.0.7
+```
+
 ## PAS VMs Stop and Start
 
 ### bosh login
