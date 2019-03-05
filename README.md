@@ -583,6 +583,13 @@ $ om --target https://localhost -k -u admin -p admin --request-timeout 3600 uplo
 $ om --target https://localhost -k -u admin -p admin stage-product -p p-spring-cloud-services -v 2.0.7
 ```
 
+### AZ and Network Assignments
+
+|Input|Value|
+|-----|-----|
+|Network|pas|
+
+
 ## PAS VMs Stop and Start
 
 ### bosh login
