@@ -516,7 +516,7 @@ $ om --target https://localhost -k -u admin -p admin stage-product -p cf -v 2.4.
 |Router - LoadBalancers|cat terraform.tfstate \| jq -r .modules[0].outputs.web_elb_name.value|
 |Diego Brain - LoadBalancers|cat terraform.tfstate \| jq -r .modules[0].outputs.ssh_elb_name.value|
 
-## MySQL for PCF
+## MySQL for PCF on AWS
 
 ### [OPSMGR] Download MySQL
 
@@ -532,6 +532,34 @@ $ pivnet download-product-files -p pivotal-mysql -r 2.5.3 -i 288349
 
 ```
 $ om --target https://localhost -k -u admin -p admin --request-timeout 3600 upload-product -p ~/pivotal-mysql-2.5.3-build.7.pivotal
+```
+
+### AZ and Network Assignments
+
+|Input|Value|
+|-----|-----|
+|Place singleton jobs in|Any|
+|Balance other jobs in|Ignore - Not used|
+|Network|pas|
+|Service Network|services|
+
+### Backups
+
+|Input|Value|
+|-----|-----|
+|Backup configuration|Ceph or Amazon S3|
+|Access Key ID||
+|Secret Access Key||
+|Endpoint URL|---|
+|Region|---<br>ap-northeast-1|
+|Bucket Name|Any<br>ex.sandbox-backups|
+|Bucket Path|Any<br>mysql-v2|
+|Cron Schedule|Default<br>0 */8 * * *|
+
+Default Region の確認
+
+```
+$ aws configure list
 ```
 
 ## PAS VMs Stop and Start
