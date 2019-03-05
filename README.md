@@ -562,6 +562,18 @@ Default Region の確認
 $ aws configure list
 ```
 
+## Sprinc Cloud Services for PCF
+
+### [OPSMGR] Download SCS for PCF
+
+```
+$ pivnet products
+$ pivnet releases -p p-spring-cloud-services
+$ pivnet accept-eula -p p-spring-cloud-services -r 2.0.7
+$ pivnet product-files -p p-spring-cloud-services -r 2.0.7
+$ pivnet download-product-files -p p-spring-cloud-services -r 2.0.7 -i 320572
+```
+
 ## PAS VMs Stop and Start
 
 ### bosh login
