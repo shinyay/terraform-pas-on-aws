@@ -40,6 +40,8 @@ Default output format [None]: json
 
 ### Download PAS Terraform Template for AWS
 
+- **terraforming-aws-0.22.0.zip**
+
 ```
 $ pivnet login --api-token='27f8.........'
 $ pivnet product-files -p elastic-runtime -r 2.4.2
